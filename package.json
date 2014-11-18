@@ -1,0 +1,23 @@
+{
+  "name": "packagetool",
+  "version": "0.0.1",
+  "description": "A tool for mtb-PackageApp auto-checking & auto-packing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amfe/or.packagetool.git"
+  },
+  "keywords": [
+    "packageapp",
+    "offline"
+  ],
+  "author": "cenan.chr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amfe/or.packagetool/issues"
+  },
+  "homepage": "https://github.com/amfe/or.packagetool"
+}
