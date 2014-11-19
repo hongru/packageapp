@@ -19,6 +19,11 @@ $ pack ./
 $ pack -d ./
 ```
 
+html文件里面不需要 离线的url可以在tag上加上`keeplive`的属性即可。比如：
+```javascript
+<script src="http://aaa.js" keeplive></script>
+```
+
 ## PackageTool 集成功能
 
 + link标签资源自动离线
