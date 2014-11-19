@@ -5,7 +5,7 @@ A package tool for Mtb-PackageApp auto-checking & auto-packing
 ## Usage
 
 ```shell
-$ npm install -g packagetool
+$ npm install -g packageapp
 $ pack [dir to be packed]
 ```
 
