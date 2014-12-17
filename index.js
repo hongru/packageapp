@@ -2,7 +2,7 @@
 // -*- js -*-
 
 var fs = require('fs'),
-	fsutil = require('./fsutil'),
+	fsutil = require('fsmore'),
 	http = require('http'),
     util = require('util'),
     path = require('path'),
@@ -23,7 +23,7 @@ var VERSION = '0.0.0',
     PWD = './';
 
 var TEMP_DIR = 'pack_temp';
-var IGNORE = ['.git/', TEMP_DIR, 'node_modules/', '.DS_Store'];
+var IGNORE = ['.git', TEMP_DIR, 'node_modules', '.DS_Store'];
 var debug = false;
 var logAtEnd = [];
 
@@ -92,8 +92,10 @@ function main (args) {
             }
         }
     }
+
+    TEMP_DIR = path.join(PWD, TEMP_DIR);
     
-    fsutil.rmdirSync(TEMP_DIR);
+    fs.existsSync(TEMP_DIR) && fsutil.rmdirSync(TEMP_DIR);
     fsutil.mkdirSync(TEMP_DIR);
     fsutil.rmdirSync(path.join(PWD, 'www.zip'));
     processAll();
@@ -273,14 +275,14 @@ function packZip () {
 
 function isIgnore (name) {
 	for (var i = 0; i < IGNORE.length; i ++) {
-		if (name === IGNORE[i]) {
+		if (name.indexOf(IGNORE[i]) > -1 ) {
 			return true;
 		}
 	}
 	return false;
 }
 
-function getAllFiles(root) {
+function getAllFiles(root) { 
 	var files = fs.readdirSync(root);
 	var res = [];
 	files.forEach(function (file, i) {
