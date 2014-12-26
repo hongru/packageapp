@@ -1,5 +1,6 @@
 # PackageTool
 
+v0.0.5
 A package tool for Mtb-PackageApp auto-checking & auto-packing
 
 ## Usage

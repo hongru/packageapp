@@ -121,8 +121,6 @@ function processAll () {
 				var fileType = arr[arr.length-1];
 				if (fileType === 'html') {
 					processHtml(file);
-				} else if (fileType === 'css') {
-					processCss(file);
 				}
 			});
 		}
