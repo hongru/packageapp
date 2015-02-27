@@ -1,10 +1,10 @@
 {
   "name": "packageapp",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A tool for mtb-PackageApp auto-checking & auto-packing",
-  "main": "index.js",
+  "main": "lib/core.js",
   "bin": {
-    "pack": "./index.js"
+    "pack": "bin/pack.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,11 +18,11 @@
     "offline"
   ],
   "dependencies": {
-    "cheerio": "~0.17.0",
-    "uglify-js": "~2.4.0",
-    "less": "~1.7.3",
     "archiver": "~0.12.0",
-    "fsmore": "~1.0.0"
+    "cheerio": "^0.18.0",
+    "fs-extra": "^0.16.3",
+    "commander": "^2.6.0",
+    "download": "^4.0.1"
   },
   "author": "cenan.chr",
   "license": "MIT",
