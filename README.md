@@ -1,6 +1,6 @@
 # PackageTool
 
-v0.0.7
+v0.0.8
 A package tool for Mtb-PackageApp auto-checking & auto-packing
 
 ## Usage
