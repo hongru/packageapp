@@ -1,24 +1,30 @@
 # PackageTool
 
-v0.0.5
+v0.0.7
 A package tool for Mtb-PackageApp auto-checking & auto-packing
 
 ## Usage
 
 ```shell
 $ npm install -g packageapp
-$ pack [dir to be packed]
+```
+
+```
+  Usage: pack [options] <htmlfile ...>
+
+  Options:
+
+    -h, --help            output usage information
+    -V, --version         output the version number
+    -p --prefix [string]  Prefix of dest file, if not assigned, source file will be rewrited
+    -z --zip <path>       Dest Zip Path, default is `process.cwd()`
 ```
 
 比如，打包当前目录为一个Package Zip，默认会将所有js，css，image离线化，并自动压缩。
 ```shell
-$ pack ./
+$ pack ./*.html
 ```
 
-如果需要不压缩的css和js用于debug，可以加参数`--debug` 或者 `-d`
-```shell
-$ pack -d ./
-```
 
 html文件里面不需要 离线的url可以在tag上加上`keeplive`的属性即可。比如：
 ```javascript
