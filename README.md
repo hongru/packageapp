@@ -1,6 +1,6 @@
 # PackageTool
 
-v0.1.1
+v0.1.2
 A package tool for Mtb-PackageApp auto-checking & auto-packing
 
 ## Usage
@@ -95,6 +95,17 @@ $ pack *.html
 
 其中`www`文件夹中就是离线化好的项目文件以及各种资源。可以直接访问离线化后的页面验证是否资源已经离线完毕并且路径替换正确。
 而 `app.zip`就是离线化完成的`www`文件夹的打包。验证无误后可以直接上传AWP的PackageApp。
+
+再来看看离线化后`www`目录下的`testA.html` 文件。
+
+![img](http://gw.alicdn.com/tfscom/TB1l4JtHpXXXXbFaXXX4G8M8pXX-900-400.png)
+
+可以发现页面资源已经全部离线化并替换url。包括引用的`shake.css`中的在线图片资源也已经全部离线化。
+
+![img](http://gw.alicdn.com/tfscom/TB10tlFHpXXXXcCXXXXxfsU1XXX-1000-174.png)
+变成
+![img](http://gw.alicdn.com/tfscom/TB1nYJBHpXXXXX7XFXXgqZT1XXX-1000-166.png)
+
 
 使用过程就是这么简单。工具提供了两个参数
 
