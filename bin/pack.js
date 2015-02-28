@@ -4,14 +4,21 @@
 var Pack = require('../lib/core');
 var program = require('commander');
 var pkg = require('../package.json');
+<<<<<<< HEAD
 var fs = require('fs-extra');
+=======
+var fs = require('fs');
+>>>>>>> 02dfb4e7771a6586c641d161e633a7cc859d0db7
 var path = require('path');
 var chalk = require('chalk');
 var archiver = require('archiver');
 var request = require('request');
 
+<<<<<<< HEAD
 var zip_dir = 'www';
 
+=======
+>>>>>>> 02dfb4e7771a6586c641d161e633a7cc859d0db7
 // test_a
 program
   .usage('[options] <htmlfile ...>')
@@ -58,6 +65,7 @@ function copyProject () {
         })
     }
 }
+
 
 function processFile (filePath) {
     var filestr = fs.readFileSync(filePath, {encoding: 'utf8'});
