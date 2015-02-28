@@ -8,6 +8,7 @@ var fs = require('fs');
 var path = require('path');
 var chalk = require('chalk');
 var archiver = require('archiver');
+var request = require('request');
 
 // test_a
 program
@@ -25,8 +26,19 @@ if (!/\.zip$/.test(program.zip)) program.zip = path.join(program.zip, 'app.zip')
 var _done = 0;
 var rootDir = process.cwd();
 program.args.forEach(function (filePath, i) {
-    if (i === 0) rootDir = path.dirname(filePath);
+    if (/^(\s+)?(http(s)?\:)?\/\//.test(filePath)) {
+        //线上url
+        var destPath = path.join(rootDir, 'index.html');
+        request(filePath)
+        .on('end', function () {
+            processFile(destPath);
+        }).pipe(fs.createWriteStream(destPath));
+    } else {
+        processFile(filePath);
+    }
+});
 
+function processFile (filePath) {
     var filestr = fs.readFileSync(filePath, {encoding: 'utf8'});
     var pack = new Pack();
     var newStr = pack.parseHtml(filestr, filePath);
@@ -41,7 +53,7 @@ program.args.forEach(function (filePath, i) {
             makeZip(rootDir, program.zip);
         }
     });
-});
+}
 
 function makeZip (root, zipPath) {
 
