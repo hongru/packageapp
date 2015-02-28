@@ -1,0 +1,34 @@
+{
+  "name": "packageapp",
+  "version": "0.0.9",
+  "description": "A tool for mtb-PackageApp auto-checking & auto-packing",
+  "main": "lib/core.js",
+  "bin": {
+    "pack": "bin/pack.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amfe/or.packagetool.git"
+  },
+  "keywords": [
+    "packageapp",
+    "offline"
+  ],
+  "dependencies": {
+    "archiver": "~0.12.0",
+    "cheerio": "^0.18.0",
+    "fs-extra": "^0.16.3",
+    "commander": "^2.6.0",
+    "chalk": "^1.0.0",
+    "request": "^2.53.0"
+  },
+  "author": "cenan.chr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amfe/or.packagetool/issues"
+  },
+  "homepage": "https://github.com/amfe/or.packagetool"
+}
