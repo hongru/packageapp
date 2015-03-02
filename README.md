@@ -1,6 +1,6 @@
 # PackageTool
 
-v0.1.3
+v0.1.32
 A package tool for Mtb-PackageApp auto-checking & auto-packing
 
 [![NPM version][npm-image]][npm-url]
