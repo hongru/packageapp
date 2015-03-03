@@ -1,6 +1,6 @@
 {
   "name": "packageapp",
-  "version": "0.1.32",
+  "version": "0.1.33",
   "description": "A tool for mtb-PackageApp auto-checking & auto-packing",
   "main": "lib/core.js",
   "bin": {

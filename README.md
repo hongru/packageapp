@@ -1,12 +1,21 @@
 # PackageTool
 
-v0.1.32
+v0.1.33
 A package tool for Mtb-PackageApp auto-checking & auto-packing
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Downloads][downloads-image]][downloads-url]
+
+[npm-image]: https://img.shields.io/npm/v/packageapp.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/packageapp
+[travis-image]: https://img.shields.io/travis/amfe/or.packagetool.svg?style=flat-square
+[travis-url]: https://travis-ci.org/amfe/or.packagetool
+[coveralls-image]: https://img.shields.io/coveralls/hongru/packageapp.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/hongru/packageapp
+[downloads-image]: http://img.shields.io/npm/dm/packageapp.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/packageapp
 
 ## Usage
 
